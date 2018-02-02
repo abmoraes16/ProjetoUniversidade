@@ -1,0 +1,10 @@
+c:\Users\41346828865\backend\ProjetoUniversidade\obj\Debug\netcoreapp2.0\ProjetoUniversidade.csproj.CoreCompileInputs.cache
+c:\Users\41346828865\backend\ProjetoUniversidade\obj\Debug\netcoreapp2.0\ProjetoUniversidade.AssemblyInfoInputs.cache
+c:\Users\41346828865\backend\ProjetoUniversidade\obj\Debug\netcoreapp2.0\ProjetoUniversidade.AssemblyInfo.cs
+C:\Users\41346828865\backend\ProjetoUniversidade\bin\Debug\netcoreapp2.0\ProjetoUniversidade.deps.json
+C:\Users\41346828865\backend\ProjetoUniversidade\bin\Debug\netcoreapp2.0\ProjetoUniversidade.runtimeconfig.json
+C:\Users\41346828865\backend\ProjetoUniversidade\bin\Debug\netcoreapp2.0\ProjetoUniversidade.runtimeconfig.dev.json
+C:\Users\41346828865\backend\ProjetoUniversidade\bin\Debug\netcoreapp2.0\ProjetoUniversidade.dll
+C:\Users\41346828865\backend\ProjetoUniversidade\bin\Debug\netcoreapp2.0\ProjetoUniversidade.pdb
+C:\Users\41346828865\backend\ProjetoUniversidade\obj\Debug\netcoreapp2.0\ProjetoUniversidade.dll
+C:\Users\41346828865\backend\ProjetoUniversidade\obj\Debug\netcoreapp2.0\ProjetoUniversidade.pdb
