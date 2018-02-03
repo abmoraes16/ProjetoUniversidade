@@ -11,8 +11,8 @@ namespace ProjetoUniversidade.Models
         [Column(Order=0)]
         public int IdArea { get; set; }
         
-        [Required]
-        [StringLength(100,MinimumLength=5)]
+        [Required(ErrorMessage="O preenchimento do Nome é obrigatório!")]
+        [StringLength(100,MinimumLength=5,ErrorMessage="O tamanho de Nome deve variar entre 5 e 100 caracteres")]
         [Column(Order=1)]
         public string Nome { get; set; }
 

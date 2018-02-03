@@ -8,3 +8,4 @@ C:\Users\41346828865\backend\ProjetoUniversidade\bin\Debug\netcoreapp2.0\Projeto
 C:\Users\41346828865\backend\ProjetoUniversidade\bin\Debug\netcoreapp2.0\ProjetoUniversidade.pdb
 C:\Users\41346828865\backend\ProjetoUniversidade\obj\Debug\netcoreapp2.0\ProjetoUniversidade.dll
 C:\Users\41346828865\backend\ProjetoUniversidade\obj\Debug\netcoreapp2.0\ProjetoUniversidade.pdb
+C:\Users\41346828865\backend\ProjetoUniversidade\bin\Debug\netcoreapp2.0\CursosOnline.xml

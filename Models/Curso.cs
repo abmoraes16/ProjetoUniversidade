@@ -11,8 +11,8 @@ namespace ProjetoUniversidade.Models
         [Column(Order=0)]
         public int IdCurso { get; set; }
         
-        [Required]
-        [StringLength(100,MinimumLength=5)]
+        [Required(ErrorMessage="O tamanho Nome deve ser entre 5 e 100 caracteres")]
+        [StringLength(100,MinimumLength=5,ErrorMessage="O tamanho Nome deve ser entre 5 e 100 caracteres")]
         [Column(Order=1)]
         public string Nome { get; set; }
 

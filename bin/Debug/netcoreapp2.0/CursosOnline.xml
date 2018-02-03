@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ProjetoUniversidade</name>
+    </assembly>
+    <members>
+        <member name="M:ProjetoUniversidade.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            Configure os serviços
+            </summary>
+            <param name="app">app</param>
+            <param name="env">env</param>
+        </member>
+    </members>
+</doc>
