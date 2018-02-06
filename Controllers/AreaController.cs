@@ -25,10 +25,10 @@ namespace ProjetoUniversidade.Controllers
             return contexto.Area.ToList();
         }
 
-/*         [HttpGet("{id}")]
+        [HttpGet("{id}")]
         public Area ListarArea(int id){
                 return contexto.Area.Where(a=>a.IdArea==id).FirstOrDefault();
-        } */
+        } 
 
         [HttpPost]
         public IActionResult PostarArea([FromBody] Area area){
