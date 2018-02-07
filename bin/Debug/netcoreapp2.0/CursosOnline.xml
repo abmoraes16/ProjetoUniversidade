@@ -4,6 +4,62 @@
         <name>ProjetoUniversidade</name>
     </assembly>
     <members>
+        <member name="M:ProjetoUniversidade.Controllers.AreaController.ListarArea">
+            <summary>
+            Retorna lista de áreas
+            </summary>
+            <returns>Lista de Areas</returns>
+            <response code="200">Retorna uma lista de areas</response>
+            <response code="400">Ocorreu um erro</response>
+        </member>
+        <member name="M:ProjetoUniversidade.Controllers.AreaController.ListarArea(System.Int32)">
+            <summary>
+            Retorna área específica
+            </summary>
+            <param name="id">Area Id</param>
+            <returns></returns>
+            <response code="200">Retorna uma área específica</response>
+            <response code="400">Ocorreu um erro</response>
+        </member>
+        <member name="M:ProjetoUniversidade.Controllers.AreaController.PostarArea(ProjetoUniversidade.Models.Area)">
+            <summary>
+            Cadastra uma nova área
+            </summary>
+            <param name="area">Nova área para registrar</param>
+            <remarks>
+            Modelo de dados que deve ser enviado para cadastrar a area request:
+            
+                POST /Area
+                {
+                    "nome" : "nome da area"
+                }
+            
+            </remarks>
+            <response code="200">Retorna área cadastrada</response>
+            <response code="400">Ocorreu um erro</response>
+        </member>
+        <member name="M:ProjetoUniversidade.Controllers.AreaController.AtualizarArea(ProjetoUniversidade.Models.Area)">
+            <summary>
+            Atualiza sua area
+            </summary>
+            <param name="area">Área que vai ser atualizada</param>
+            <returns>Retorna a área atualizada</returns>
+            <response code="200">Retorna a área atualizada</response>
+            <response code="400">Ocorreu um erro</response>
+            <response code="404">Área não encontrada</response>
+        </member>
+        <member name="M:ProjetoUniversidade.Controllers.CursoController.ListarCurso">
+            <summary>
+            Retorna lista de cursos
+            </summary>
+            <returns>Lista de Areas</returns>
+        </member>
+        <member name="M:ProjetoUniversidade.Controllers.TurmaController.ListarTurma">
+            <summary>
+            Retorna lista de turmas
+            </summary>
+            <returns>Lista de Areas</returns>
+        </member>
         <member name="M:ProjetoUniversidade.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
             <summary>
             Configure os serviços

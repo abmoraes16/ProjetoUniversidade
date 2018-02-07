@@ -16,11 +16,11 @@ namespace ProjetoUniversidade.Controllers
             this.contexto = Contexto;
         }
 
-        [HttpGet]
         /// <summary>
-        /// Listar Turma
+        /// Retorna lista de turmas
         /// </summary>
-        /// <returns>Lista de Turmas</returns>
+        /// <returns>Lista de Areas</returns>
+        [HttpGet]
         public IEnumerable<Turma> ListarTurma(){
             return contexto.Turma.ToList();
         }

@@ -16,11 +16,11 @@ readonly UniversidadeContexto contexto;
             this.contexto = Contexto;
         }
 
-        [HttpGet]
         /// <summary>
-        /// Listar Curso
+        /// Retorna lista de cursos
         /// </summary>
-        /// <returns>Lista de Cursos</returns>
+        /// <returns>Lista de Areas</returns>
+        [HttpGet]
         public IEnumerable<Curso> ListarCurso(){
             return contexto.Curso.ToList();
         }

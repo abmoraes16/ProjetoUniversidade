@@ -16,21 +16,56 @@ namespace ProjetoUniversidade.Controllers
             this.contexto = Contexto;
         }
 
-        [HttpGet]
         /// <summary>
-        /// Listar Area
+        /// Retorna lista de áreas
         /// </summary>
         /// <returns>Lista de Areas</returns>
+        /// <response code="200">Retorna uma lista de areas</response>
+        /// <response code="400">Ocorreu um erro</response>
+        [HttpGet]
+        [ProducesResponseType(typeof(List<Area>),200)]
+        [ProducesResponseType(typeof(string),400)]
         public IEnumerable<Area> ListarArea(){
             return contexto.Area.ToList();
         }
 
+        /// <summary>
+        /// Retorna área específica
+        /// </summary>
+        /// <param name="id">Area Id</param>
+        /// <returns></returns>
+        /// <response code="200">Retorna uma área específica</response>
+        /// <response code="400">Ocorreu um erro</response>
         [HttpGet("{id}")]
-        public Area ListarArea(int id){
-                return contexto.Area.Where(a=>a.IdArea==id).FirstOrDefault();
+        [ProducesResponseType(typeof(Area),200)]
+        [ProducesResponseType(typeof(string),400)]
+        public IActionResult ListarArea(int id){
+            try{
+                return Ok(contexto.Area.Where(a=>a.IdArea==id).FirstOrDefault());
+            }
+            catch(Exception ex){
+                return BadRequest(ex.Message);
+            }
         } 
 
+        /// <summary>
+        /// Cadastra uma nova área
+        /// </summary>
+        /// <param name="area">Nova área para registrar</param>
+        /// <remarks>
+        /// Modelo de dados que deve ser enviado para cadastrar a area request:
+        /// 
+        ///     POST /Area
+        ///     {
+        ///         "nome" : "nome da area"
+        ///     }
+        /// 
+        /// </remarks>
+        /// <response code="200">Retorna área cadastrada</response>
+        /// <response code="400">Ocorreu um erro</response>
         [HttpPost]
+        [ProducesResponseType(typeof(Area),200)]
+        [ProducesResponseType(typeof(string),400)]
         public IActionResult PostarArea([FromBody] Area area){
             
             try{
@@ -44,7 +79,7 @@ namespace ProjetoUniversidade.Controllers
                 int x = contexto.SaveChanges();
 
                 if(x>0){
-                    return Ok();
+                    return Ok(area);
                 }
                 
             }
@@ -80,8 +115,17 @@ namespace ProjetoUniversidade.Controllers
             return BadRequest();
         }
 
+/// <summary>
+/// Atualiza sua area
+/// </summary>
+/// <param name="area">Área que vai ser atualizada</param>
+/// <returns>Retorna a área atualizada</returns>
+/// <response code="200">Retorna a área atualizada</response>
+/// <response code="400">Ocorreu um erro</response>
+/// <response code="404">Área não encontrada</response>
         [HttpPut]    
-        
+        [ProducesResponseType(typeof(Area),200)]
+        [ProducesResponseType(typeof(string),400)] 
         public IActionResult AtualizarArea([FromBody]Area area){
 
         try{
